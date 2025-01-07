@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-import psycopg2
+import psycopg
 import os
 from datetime import datetime
 from dotenv import load_dotenv
@@ -10,7 +10,7 @@ load_dotenv()  # So we can read .env DB credentials, if available
 
 # Function to connect to the database using existing credentials
 def connect_to_db():
-    return psycopg2.connect(
+    return psycopg.connect(
         dbname=os.getenv("DB_NAME", "leaderboard"),
         user=os.getenv("DB_USER", "postgres"),
         password=os.getenv("DB_PASSWORD", "sudharsan25"),
