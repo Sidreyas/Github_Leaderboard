@@ -1,8 +1,5 @@
-fastapi
-uvicorn
-psycopg2
+streamlit
 psycopg2-binary
-sqlalchemy
 python-dotenv
 requests
-alembic
+werkzeug
